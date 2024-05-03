@@ -23,7 +23,7 @@ class BusinessMessage(Base):
     message_id = mapped_column(BigInteger)
     chat_id = mapped_column(BigInteger)
     business_user_id = mapped_column(BigInteger)
-    text: Mapped[str] = mapped_column()
+    text: Mapped[str] = mapped_column(nullable=True)
     time: Mapped[str] = mapped_column()
     is_deleted: Mapped[bool] = mapped_column(default=False)
 
