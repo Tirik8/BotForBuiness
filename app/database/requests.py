@@ -11,3 +11,7 @@ async def add_user(tg_id: int) -> None:
             await session.execute(insert(User).values(tg_id=tg_id))
             await session.commit()
                                 
+async def add_business_message(business_message: dict) -> None:
+    async with async_session() as session:
+        await session.execute(insert(BusinessMessage).values(**business_message))
+        await session.commit()

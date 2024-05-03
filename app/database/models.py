@@ -19,12 +19,13 @@ class BusinessMessage(Base):
     __tablename__ ='business_messages'
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    message_id = mapped_column(BigInteger)
     from_user_id = mapped_column(ForeignKey('users.id'))
-    to_user_id = mapped_column(BigInteger)
+    message_id = mapped_column(BigInteger)
+    chat_id = mapped_column(BigInteger)
+    business_user_id = mapped_column(BigInteger)
     text: Mapped[str] = mapped_column()
     time: Mapped[str] = mapped_column()
-    is_deleted: Mapped[bool] = mapped_column()
+    is_deleted: Mapped[bool] = mapped_column(default=False)
 
 class Message(Base):
     __tablename__ ='messages'
