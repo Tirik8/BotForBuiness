@@ -1,7 +1,7 @@
 from bot.database.models import async_session
-from bot.database.models import User, Message, BusinessMessage
+from bot.database.models import User,BusinessMessage
 
-from sqlalchemy import select, update, delete, insert
+from sqlalchemy import select, update, insert
 
 async def add_user(tg_id: int) -> None:
     async with async_session() as session:
