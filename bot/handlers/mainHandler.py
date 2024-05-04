@@ -1,11 +1,9 @@
 from aiogram import Router
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
-from app.database.dataBase import DataBase
-import app.database.requests as rq
+import bot.database.requests as rq
 
 router = Router()
-db = DataBase()
 
 @router.message(Command('start'))
 async def start(message: Message):
