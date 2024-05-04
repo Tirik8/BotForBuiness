@@ -1,7 +1,8 @@
 # Start bot  
-1. create .env file with BOT_API_KEY or pass the parametet as an argument
-2. download all librares from requierements.txt
-3. if you with .env file: enter command -> python main.py  
+1. Create .env file with BOT_API_KEY or pass the parametet as an argument
+2. Download all librares from requierements.txt  
+3. Download and run Redis
+4. If you with .env file: enter command -> python main.py  
 else: enter command -> python main.py [your bot token]
 # TODO
 ---30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
