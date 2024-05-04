@@ -4,7 +4,8 @@ from aioredis import Redis
 
 import os
 
-from bot.handlers import mainHandler, businessHandler
+from bot.handlers.commands import start
+from bot.handlers.business import message, deletMessages
 from bot.database.models import async_db_main
 
 async def main():
@@ -15,7 +16,7 @@ async def main():
     redis = Redis()
     dp = Dispatcher(storage=RedisStorage(redis=redis))
 
-    dp.include_routers(mainHandler.router, businessHandler.router) 
+    dp.include_routers(start.router, message.router, deletMessages.router) 
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
