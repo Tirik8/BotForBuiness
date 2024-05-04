@@ -1,5 +1,5 @@
 from bot.database.models import async_session
-from bot.database.models import User,BusinessMessage
+from bot.database.models import User, BusinessMessage
 
 from sqlalchemy import select, update, insert
 
@@ -16,7 +16,7 @@ async def add_business_message(business_message: dict) -> None:
         await session.execute(insert(BusinessMessage).values(**business_message))
         await session.commit()
 
-async def get_business_messages(chat_id: int, ids: list) -> list:
+async def get_ans_set_delete_business_messages(chat_id: int, ids: list) -> list:
     async with async_session() as session:
         result = await session.execute(update(BusinessMessage)
                                 .where(BusinessMessage.chat_id == chat_id)
