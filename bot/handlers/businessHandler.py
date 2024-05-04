@@ -38,7 +38,7 @@ async def bmsgdel(message: business_messages_deleted, bot: Bot):
         text = "В чате с пользователем @"+ message.chat.username + " удалены следующие сообщения:\n"
         for message in messages:
             text+= message.text + "\n"
-            
+
         await bot.send_message(text = text, chat_id = business_connection.user.id)
 
     except:
