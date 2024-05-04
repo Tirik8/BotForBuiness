@@ -9,10 +9,10 @@ This bot can track deleted messages and send you notifications about it, includi
 6. If you with .env file: enter command -> python main.py  
 else: enter command -> python main.py [your bot token]  
 ### If you dont want to connect Redis
-#### Replace in bot/main.py:  
+###### Replace in bot/main.py:  
 "from aiogram.fsm.storage.redis import RedisStorage" -> "from aiogram.fsm.storage.memory import MemoryStorage"  
 "dp = Dispatcher(storage=RedisStorage(redis=redis))" -> "dp = Dispatcher(storage=MemoryStorage())"  
-#### And delete:  
+###### And delete in bot/main.py:  
 "redis = Redis()"  
 # TODO
 ---30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
