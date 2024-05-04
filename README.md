@@ -13,7 +13,7 @@ Replace in bot/main.py:
 "from aiogram.fsm.storage.redis import RedisStorage" -> "from aiogram.fsm.storage.memory import MemoryStorage"  
 "dp = Dispatcher(storage=RedisStorage(redis=redis))" -> "dp = Dispatcher(storage=MemoryStorage())"  
 And delete:  
-redis = Redis()  
+"redis = Redis()"  
 # TODO
 ---30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
 TODO: config menu for subscribers with configurate answers (regular expression?)  
