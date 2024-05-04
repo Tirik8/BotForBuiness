@@ -10,7 +10,7 @@ async def add_user(tg_id: int) -> None:
         if user is None:
             await session.execute(insert(User).values(tg_id=tg_id))
             await session.commit()
-                                
+
 async def add_business_message(business_message: dict) -> None:
     async with async_session() as session:
         await session.execute(insert(BusinessMessage).values(**business_message))
@@ -24,9 +24,7 @@ async def get_business_messages(chat_id: int, ids: list) -> list:
                                 .values(is_deleted=True)
                                 )
         await session.commit()
-
-
-    async with async_session() as session:
+    
         result = await session.execute(select(BusinessMessage)
                                        .where(BusinessMessage.chat_id == chat_id)
                                        .filter(BusinessMessage.message_id.in_(ids))
