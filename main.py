@@ -1,17 +1,13 @@
 import asyncio
-import logging
 from dotenv import load_dotenv
 
+from app.utils.logs import start_logging
 from app.main import main
 
 if __name__ == "__main__":
     load_dotenv(".env")
     
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
-    )
-    logging.getLogger("sqlalchemy").setLevel(logging.INFO)
+    start_logging()
 
     try:
         asyncio.run(main())
