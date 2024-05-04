@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher
-from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.fsm.storage.redis import RedisStorage
+from aioredis import Redis
 
 import os
 
@@ -11,7 +12,9 @@ async def main():
     
     bot = Bot(token=os.environ.get('BOT_API_KEY')) 
     
-    dp = Dispatcher(storage=MemoryStorage())
+    redis = Redis()
+    dp = Dispatcher(storage=RedisStorage(redis=redis))
+
     dp.include_routers(mainHandler.router, businessHandler.router) 
     
     await bot.delete_webhook(drop_pending_updates=True)
