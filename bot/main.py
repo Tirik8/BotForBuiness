@@ -4,8 +4,8 @@ from aioredis import Redis
 
 import os
 
-from app.handlers import mainHandler, businessHandler
-from app.database.models import async_main
+from bot.handlers import mainHandler, businessHandler
+from bot.database.models import async_main
 
 async def main():
     await async_main()

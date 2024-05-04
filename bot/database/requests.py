@@ -1,5 +1,5 @@
-from app.database.models import async_session
-from app.database.models import User, Message, BusinessMessage
+from bot.database.models import async_session
+from bot.database.models import User, Message, BusinessMessage
 
 from sqlalchemy import select, update, delete, insert
 

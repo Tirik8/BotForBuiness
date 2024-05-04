@@ -1,6 +1,6 @@
 from aiogram import Router, Bot
 from aiogram.types import Message, business_messages_deleted, BusinessConnection
-from app.database.requests import add_business_message, get_business_messages
+from bot.database.requests import add_business_message, get_business_messages
 
 import re
 
