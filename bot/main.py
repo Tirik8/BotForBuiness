@@ -5,10 +5,10 @@ from aioredis import Redis
 import os
 
 from bot.handlers import mainHandler, businessHandler
-from bot.database.models import async_main
+from bot.database.models import async_db_main
 
 async def main():
-    await async_main()
+    await async_db_main()
     
     bot = Bot(token=os.environ.get('BOT_API_KEY')) 
     
