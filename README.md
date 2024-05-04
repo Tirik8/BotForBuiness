@@ -1,8 +1,11 @@
+# For what this bot?
+This bot can track deleted messages and send you notifications about it, including the content of theese messages  
 # Start bot  
-1. Create .env file with BOT_API_KEY or pass the parametet as an argument
-2. Download all librares from requierements.txt  
-3. Download and run Redis
-4. If you with .env file: enter command -> python main.py  
+1. In BotFather get token and turn on business mode
+2. Create .env file with "BOT_API_KEY = [your token]" or pass the token as an argument
+3. Download all librares from requierements.txt  
+4. Download and run Redis
+5. If you with .env file: enter command -> python main.py  
 else: enter command -> python main.py [your bot token]
 # TODO
 ---30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
