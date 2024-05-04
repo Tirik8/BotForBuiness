@@ -23,8 +23,4 @@ TODO: admins for bot? (admins can subscribe, unsubscribe, edit price list, edit 
 TODO: handlers for voice, video and picture messages  
 TODO: fields for resend messages and answers  
 TODO: hadnler for rewited messages  
-# DONE  
----OK--- env vars for bot config  
----OK--- rewrite bot to async  
----OK--- include redis  
----OK--- include advanced logging  
+
