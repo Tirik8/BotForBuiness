@@ -2,7 +2,7 @@
 1. create .env file with BOT_API_KEY or pass the parametet as an argument
 2. download all librares from requierements.txt
 3. if you with .env file: python main.py  
-else: python main.py <your bot token>
+else: python main.py [your bot token]
 # TODO
 ---30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
 TODO: config menu for subscribers with configurate answers (regular expression?)  
