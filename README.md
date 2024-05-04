@@ -2,7 +2,7 @@
 This bot can track deleted messages and send you notifications about it, including the content of theese messages  
 # Start bot  
 1. In BotFather get token and turn on business mode  
-2. In your tg account go to Settings -> Telegram Business-> Chatbots and enter your bot  
+2. In your tg account go to Settings -> Telegram Business-> Chatbots enter your bot  
 3. Create .env file with "BOT_API_KEY = [your token]" or pass the token as an argument  
 4. Download all librares from requierements.txt  
 5. Download and run Redis  
