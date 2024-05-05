@@ -6,7 +6,7 @@ import os
 
 from bot.handlers.commands import start
 from bot.handlers.business import editMessage, message, deletMessages
-from bot.database.models import async_db_main
+from bot.database import async_db_main
 
 async def main():
     await async_db_main()

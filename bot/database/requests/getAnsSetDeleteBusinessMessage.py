@@ -1,20 +1,9 @@
-from bot.database.models import async_session
-from bot.database.models import User, BusinessMessage
+from bot.database import async_session
+from bot.database.models import BusinessMessage
 
-from sqlalchemy import select, update, insert
+from sqlalchemy import select, update
 
-async def add_user(tg_id: int) -> None:
-    async with async_session() as session:
-        user = await session.scalar(select(User).where(User.tg_id == tg_id))
 
-        if user is None:
-            await session.execute(insert(User).values(tg_id=tg_id))
-            await session.commit()
-
-async def add_business_message(business_message: dict) -> None:
-    async with async_session() as session:
-        await session.execute(insert(BusinessMessage).values(**business_message))
-        await session.commit()
 
 async def get_ans_set_delete_business_messages(chat_id: int, ids: list) -> list:
     async with async_session() as session:
