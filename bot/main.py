@@ -5,7 +5,7 @@ from aioredis import Redis
 import os
 
 from bot.handlers.commands import start
-from bot.handlers.business import editMessages, message, deletMessages
+from bot.handlers.business import editMessage, message, deletMessages
 from bot.database.models import async_db_main
 
 async def main():
@@ -19,7 +19,7 @@ async def main():
     dp.include_routers(start.router,
                        message.router,
                        deletMessages.router,
-                       editMessages.router
+                       editMessage.router
                        ) 
 
     await bot.delete_webhook(drop_pending_updates=True)
