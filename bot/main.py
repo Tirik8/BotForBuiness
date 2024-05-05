@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.redis import RedisStorage
 from aioredis import Redis
 
-import os
+from os import environ
 
 from bot.handlers.commands import start
 from bot.handlers.business import editMessage, message, deletMessages
@@ -11,7 +11,7 @@ from bot.database import async_db_main
 async def main():
     await async_db_main()
 
-    bot = Bot(token=os.environ.get('BOT_API_KEY')) 
+    bot = Bot(token=environ.get('BOT_API_KEY')) 
     
     redis = Redis()
     dp = Dispatcher(storage=RedisStorage(redis=redis))

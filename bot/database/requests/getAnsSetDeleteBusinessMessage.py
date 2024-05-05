@@ -3,8 +3,6 @@ from bot.database.models import BusinessMessage
 
 from sqlalchemy import select, update
 
-
-
 async def get_ans_set_delete_business_messages(chat_id: int, ids: list) -> list:
     async with async_session() as session:
         result = await session.execute(update(BusinessMessage)

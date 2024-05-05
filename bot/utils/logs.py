@@ -13,5 +13,3 @@ def start_logging():
     f_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(name)s - %(message)s"))
 
     logging.basicConfig(handlers=[c_handler, f_handler], level=logging.INFO)
-    
-    
