@@ -17,7 +17,7 @@ async def handler_business_message(message: Message, bot: Bot):
         "text": message.text,
         "time": message.date,
     }
-    
+
     await add_business_message(bm)
 
     if message.from_user.id != business_connection.user.id:
