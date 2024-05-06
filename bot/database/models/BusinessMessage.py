@@ -14,4 +14,4 @@ class BusinessMessage(Base):
     text: Mapped[str] = mapped_column(nullable=True)
     time: Mapped[str] = mapped_column()
     is_deleted: Mapped[bool] = mapped_column(default=False)
-    iteraion: Mapped[int] = mapped_column()
+    iteraion: Mapped[int] = mapped_column(default=0)
