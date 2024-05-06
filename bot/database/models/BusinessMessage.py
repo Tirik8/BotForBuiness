@@ -1,6 +1,6 @@
 from sqlalchemy import ForeignKey, BigInteger
 from sqlalchemy.orm import Mapped, mapped_column
-from .Basel import Base
+from .Base import Base
 
 class BusinessMessage(Base):
     __tablename__ ='business_messages'
