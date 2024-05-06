@@ -6,4 +6,4 @@ venv/
 .vscode/
 logs/
 .git/
-.content/
+content/
