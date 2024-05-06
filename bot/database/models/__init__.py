@@ -2,7 +2,7 @@ __all__ = (
     "Base",
     "BusinessMessage",
     "Message",
-    "User" ,
+    "User",
 )
 
 from .Base import Base

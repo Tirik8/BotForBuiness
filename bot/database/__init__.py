@@ -10,6 +10,7 @@ from .models import Base
 engine = create_async_engine(settings.DATABASE_URI)
 async_session = async_sessionmaker(engine)
 
+
 async def async_db_main():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)

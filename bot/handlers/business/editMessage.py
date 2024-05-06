@@ -4,9 +4,12 @@ from bot.database.requests import add_business_message
 
 router = Router()
 
+
 @router.edited_business_message()
 async def edit_message(message: Message, bot: Bot):
-    business_connection = await bot.get_business_connection(message.business_connection_id)
+    business_connection = await bot.get_business_connection(
+        message.business_connection_id
+    )
     bm = {
         "from_user_id": message.from_user.id,
         "message_id": message.message_id,

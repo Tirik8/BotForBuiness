@@ -5,9 +5,12 @@ from bot.utils.answer import answer
 
 router = Router()
 
+
 @router.business_message()
 async def handler_business_message(message: Message, bot: Bot):
-    business_connection = await bot.get_business_connection(message.business_connection_id)
+    business_connection = await bot.get_business_connection(
+        message.business_connection_id
+    )
     business_message = {
         "from_user_id": message.from_user.id,
         "message_id": message.message_id,
@@ -23,7 +26,7 @@ async def handler_business_message(message: Message, bot: Bot):
         ans = answer(message.text)
         if ans:
             message_answer = await message.answer(ans)
-            
+
             business_message_answer = {
                 "from_user_id": message_answer.from_user.id,
                 "message_id": message_answer.message_id,
