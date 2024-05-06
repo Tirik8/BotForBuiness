@@ -14,7 +14,6 @@ async def get_ans_set_delete_business_messages(chat_id: int, ids: list) -> list:
         )
         await session.commit()
 
-    async with async_session() as session:
         result = await session.execute(
             select(BusinessMessage)
             .where(BusinessMessage.chat_id == chat_id)
