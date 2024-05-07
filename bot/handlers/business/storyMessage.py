@@ -6,6 +6,6 @@ from bot.database.requests import add_business_message
 router = Router()
 
 
-@router.message(F.video)
+@router.message(F.story)
 async def sticker_message(message: Message):
     pass
