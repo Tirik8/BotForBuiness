@@ -2,12 +2,14 @@ from aiogram import Router, Bot, F
 from aiogram.types import Message
 from bot.database.requests import add_business_message
 from config import settings
+from utils.logs import log
 
 router = Router()
 
 
 @router.business_message(F.photo)
 async def handler_business_Photo(message: Message, bot: Bot):
+    log(message)
     business_connection = await bot.get_business_connection(
         message.business_connection_id
     )

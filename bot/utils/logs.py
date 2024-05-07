@@ -18,3 +18,6 @@ def start_logging():
     )
 
     logging.basicConfig(handlers=[c_handler, f_handler], level=logging.INFO)
+
+def log(message):
+    logging.info(message)
