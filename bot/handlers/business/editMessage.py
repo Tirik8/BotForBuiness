@@ -20,3 +20,5 @@ async def edit_message(message: Message, bot: Bot):
     }
 
     await add_business_message(bm)
+
+    # TODO set new iteration in database( get last iteration from db and write last+1)
