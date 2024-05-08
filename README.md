@@ -1,6 +1,6 @@
 # For what this bot?
 This bot can track deleted messages and send you notifications about it, including the content of theese messages  
-## Why this name?
+### Why this name?
 In telerram, this bot can be connected in the menu "Teletram Business"
 # Start bot  
 1. In BotFather get token and turn on business mode  
