@@ -5,7 +5,13 @@ from aioredis import Redis
 from os import environ
 
 from bot.handlers.commands import start
-from bot.handlers.business import editMessage, message, deletMessages, voiceMessage, PhotoMessage
+from bot.handlers.business import (
+    editMessage,
+    message,
+    deletMessages,
+    voiceMessage,
+    PhotoMessage,
+)
 from bot.database import async_db_main
 
 
