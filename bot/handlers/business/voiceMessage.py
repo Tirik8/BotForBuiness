@@ -1,7 +1,7 @@
 from aiogram import Router, Bot, F
 from aiogram.types import Message
 from config import settings
-from bot.database.requests import add_business_message
+from bot.database.requests import add_business_voice
 
 router = Router()
 
@@ -25,7 +25,6 @@ async def handler_voice_message(message: Message, bot: Bot):
         "business_user_id": business_connection.user.id,
         "time": message.date,
         "content_type": "voice",
-        "filename": filename,
     }
 
-    await add_business_message(business_message_answer)
+    await add_business_voice(business_message_answer, filename)
