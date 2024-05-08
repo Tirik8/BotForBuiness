@@ -6,6 +6,7 @@ This bot can track deleted messages and send you notifications about it, includi
 3. Create .env file with "BOT_API_KEY = [your token]" or pass the token as an argument  
 4. Download all librares from requierements.txt  
 5. Download and run Redis  
+6. Create derictories: content/photo, content/video, content/voice  
 6. If you with .env file: enter command -> python main.py  
 else: enter command -> python main.py [your bot token]  
 ### If you dont want to connect Redis
@@ -14,6 +15,8 @@ else: enter command -> python main.py [your bot token]
 "dp = Dispatcher(storage=RedisStorage(redis=redis))" -> "dp = Dispatcher(storage=MemoryStorage())"  
 ##### And delete in bot/main.py:  
 "redis = Redis()"  
+### One library may contain a bug:  
+If you catch it - go to github/issues, the problem is described there and it will be fixed in one line
 # TODO
 ---30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
 TODO: config menu for subscribers with configurate answers (regular expression?)  
