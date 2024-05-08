@@ -16,7 +16,7 @@ else: enter command -> python main.py [your bot token]
 ##### And delete in bot/main.py:  
 "redis = Redis()"  
 ### One library may contain a bug:  
-(I dont demember wich one)  
+(I dont remember wich one)  
 If you catch it - go to github/issues, the problem is described there and it will be fixed in one line
 # TODO
 ---30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
