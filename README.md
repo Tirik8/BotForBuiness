@@ -7,6 +7,7 @@ This bot can track deleted messages and send you notifications about it, includi
 4. Download all librares from requierements.txt  
 5. Download and run Redis  
 6. Create derictories: content/photo, content/video, content/voice  
+7. Run the commands:   alembic revision --autogenerate -m "start"   and   alembic upgrade head  
 6. If you with .env file: enter command -> python main.py  
 else: enter command -> python main.py [your bot token]  
 ### If you dont want to connect Redis
