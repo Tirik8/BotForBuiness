@@ -7,3 +7,4 @@ venv/
 logs/
 .git/
 content/
+alembic/versions/*
