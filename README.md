@@ -21,12 +21,6 @@ else: enter command -> python main.py [your bot token]
 (I dont remember wich one)  
 If you catch it - go to github/issues, the problem is described there and it will be fixed in one line
 # TODO
----30%--- TODO: database with SQLalchemy ORM (async) [subscribes, price list, messages, users, users configs]?  
-TODO: config menu for subscribers with configurate answers (regular expression?)  
-TODO: inline buttons (with another library?)  
-TODO: telegram payments for subscribe  
-TODO: admins for bot? (admins can subscribe, unsubscribe, edit price list, edit config)  
-TODO: handlers for voice, video and picture messages  
+---50%--- TODO: database with SQLalchemy ORM (async) [messages, users, users configs]?  
+TODO: config menu in telegram with configurate answers (regular expression?)  
 TODO: fields for resend messages and answers  
-TODO: hadnler for rewited messages  
-
