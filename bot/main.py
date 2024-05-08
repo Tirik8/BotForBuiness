@@ -4,12 +4,12 @@ from aioredis import Redis
 
 from os import environ
 
-from bot.handlers.commands import start
+from bot.handlers.commands import Start
 from bot.handlers.business import (
-    editMessage,
-    message,
-    deletMessages,
-    voiceMessage,
+    EditMessage,
+    TextMessage,
+    DeletMessages,
+    VoiceMessage,
     PhotoMessage,
 )
 from bot.database import async_db_main
@@ -24,11 +24,11 @@ async def main():
     dp = Dispatcher(storage=RedisStorage(redis=redis))
 
     dp.include_routers(
-        start.router,
-        message.router,
-        deletMessages.router,
-        editMessage.router,
-        voiceMessage.router,
+        Start.router,
+        TextMessage.router,
+        DeletMessages.router,
+        EditMessage.router,
+        VoiceMessage.router,
         PhotoMessage.router,
     )
 
