@@ -3,12 +3,13 @@ This bot can track deleted messages and send you notifications about it, includi
 # Start bot  
 1. In BotFather get token and turn on business mode  
 2. In your tg account go to Settings -> Telegram Business-> Chatbots and enter your bot  
-3. Create .env file with "BOT_API_KEY = [your token]" or pass the token as an argument  
+3. Initialize virtualvenv (python -m venv venv)
 4. Download all librares from requierements.txt  
-5. Download and run Redis  
-6. Create derictories: content/photo, content/video, content/voice  
-7. Run the commands:   alembic revision --autogenerate -m "start"   and   alembic upgrade head  
-6. If you with .env file: enter command -> python main.py  
+5. Create .env file with "BOT_API_KEY = [your token]" or pass the token as an argument  
+6. Download and run Redis  
+7. Create derictories: content/photo, content/video, content/voice  
+8. Run the commands:   alembic revision --autogenerate -m "start"   and   alembic upgrade head  
+9. If you with .env file: enter command -> python main.py  
 else: enter command -> python main.py [your bot token]  
 ### If you dont want to connect Redis
 ##### Replace in bot/main.py:  
